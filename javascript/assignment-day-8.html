@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment Day 8</title>
+</head>
+  <body>
+	<h1>Basic Javascript</h1>
+	<script>
+		function convertStringToNumber(string) {
+			return Number(string);
+		}
+
+		function convertNumberToString(number) {
+			return String(number);
+		}
+
+		function convertStringArrayToArray(stringArray) {
+			return stringArray.split(',');
+		}
+	</script>
+	<label for="string_1">Insert String</label>
+	<input type="text" id="string_1" placeholder="Enter a string">
+	<button onclick="alert(convertStringToNumber(document.getElementById('string').value))">Convert String to Number</button><br>
+	<label for="string_2">Insert Number</label>
+	<input type="text" id="string_2" placeholder="Enter a string">
+	<button onclick="alert(convertNumberToString(document.getElementById('string').value))">Convert Number to String</button><br>
+	<label for="string_3">String Array</label>
+	<input type="text" id="string_3" placeholder="Enter a string">
+	<button onclick="alert(convertStringArrayToArray(document.getElementById('string').value))">Convert String Array to Array</button>
+  </body>
+</html>
