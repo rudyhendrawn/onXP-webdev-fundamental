@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<h1>Item Store</h1>
-		<form class="grid-item" id="item-form">
+		<form class="grid-item" id="itemForm">
 			<input type="hidden" id="itemId" name="itemId">
 			<label for="itemName">Item Name: </label>
 			<input type="text" id="itemName" name="itemName">
@@ -16,19 +16,23 @@
 			<label for="itemQuantity">Item Quantity: </label>
 			<input type="text" id="itemQuantity" name="itemQuantity">
 			<label for="itemTotal">Item Total: </label>
-			<input type="text" id="itemTotal" name="itemTotal">
-			<input type="submit" value="Add Item" onclick="addItem()">
-			<input type="button" value="View Item" onclick="viewItem()">
+			<input type="text" id="itemTotal" name="itemTotal" readonly><br>
+			<input type="submit" value="Add/Update Item">
 		</form><br>
+		<input type="button" value="View Item" onclick="viewItems()"><br><br>
 		<label for="searchItem">Search Item: </label>
 		<input type="text" id="searchItem" name="searchItem">
 		<button onclick="searchItem(event)">Search Item</button><br><br>
-		<table class="grid-item" id="item-table">
-			<tr>
-				<th>Item Name</th>
-				<th>Item Price</th>
-				<th>Item Total</th>
-			</tr>
+		<table id="itemTable">
+			<thead>
+				<tr>
+					<th>Item Name</th>
+					<th>Item Price</th>
+					<th>Item Quantity</th>
+					<th>Item Total</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
 		</table>
 		<script src="assignment-day-10.js"></script>
 	</body>
